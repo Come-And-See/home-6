@@ -14,6 +14,8 @@
   --modal-backdrop: rgba(46, 47, 66, 0.4);
   --modal-bkg: #fcfcfc;
   --modal-button-bkg: #e7e9fc;
+  --modal-form-comment-text: rgba(46, 47, 66, 0.4);
+  --modal-form-border: rgba(46, 47, 66, 0.2);
 }
 
 body {
@@ -236,6 +238,150 @@ img {
   scale: 0.5;
 }
 
+.modal-text {
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--bkg-color);
+  padding: 72px 0 0;
+  margin-bottom: 16px;
+}
+
+.modal-form {
+  padding: 0 24px;
+}
+.modal-form-ul {
+  margin-bottom: 16px;
+}
+
+.modal-form-text {
+  display: block;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--customers-icon);
+  margin-bottom: 4px;
+}
+
+.modal-form-input {
+  width: 360px;
+  height: 40px;
+  border: 1px solid var(--modal-form-border);
+  padding-left: 38px;
+  border-radius: 4px;
+  outline: none;
+}
+.modal-form-comment {
+  width: 360px;
+  height: 120px;
+  border: 1px solid var(--modal-form-border);
+  border-radius: 4px;
+  resize: none;
+  outline: none;
+  padding: 8px 0 0 16px;
+}
+
+.modal-form-comment::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--modal-form-comment-text);
+}
+
+.modal-form-input:focus {
+  border: 1px solid #4d5ae5;
+}
+
+.modal-form-input:focus + .modal-form-icon {
+  fill: var(--color-button);
+}
+
+.modal-form-comment:focus {
+  border: 1px solid #4d5ae5;
+}
+
+.modal-form-input-svg {
+  position: relative;
+  margin-bottom: 8px;
+}
+.modal-form-icon {
+  width: 18px;
+  height: 24px;
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.modal-form-policy-text {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--customers-icon);
+}
+
+.modal-button-send {
+  background: var(--color-button);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  border: none;
+
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--color-title-write);
+  cursor: pointer;
+
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+
+  width: 169px;
+  height: 56px;
+}
+
+.modal-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.modal-form-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+.modal-form-checkbox-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #2e2f42;
+  border-radius: 2px;
+}
+
+.modal-checkbox:checked + .modal-form-checkbox-icon {
+  background-image: url(../images/click.svg);
+  background-size: contain;
+  background-origin: border-box;
+  border: none;
+}
+
+
+
+
 /* Header */
 
 .logo {
@@ -331,7 +477,8 @@ img {
 /* Hero Image */
 .hero {
   background-color: var(--bkg-color);
-  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url(../images/people-office.jpg);
   max-width: 1440px;
 
   margin-left: auto;
@@ -358,7 +505,8 @@ img {
   border: none;
   min-width: 169px;
   min-height: 56px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .order-service:hover,
@@ -472,7 +620,8 @@ img {
 
 .team-list-item {
   background: var(--color-title-write);
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
 }
 
@@ -537,6 +686,9 @@ img {
   align-items: baseline;
 }
 
+.footer-soc {
+  margin-right: 80px;
+}
 .footer-soc-text {
   font-weight: 500;
   line-height: 1.5;
@@ -571,6 +723,62 @@ img {
   background-color: var(--color-soc-hover-footer);
 }
 
+.footer-subscribe-text {
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--color-title-write);
+  margin-bottom: 16px;
+}
+
+.footer-subscribe-form {
+  display: flex;
+}
+.form-label {
+  margin-right: 24px;
+}
+
+.form-input {
+  border: none;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background: transparent;
+  width: 264px;
+  height: 40px;
+  color: var(--color-title-write);
+  outline: 1px solid #ffffff;
+  padding: 8px 0 8px 16px;
+}
+
+.form-input::placeholder {
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: var(--color-title-write);
+}
+
+.form-button {
+  background: var(--color-button);
+  border-radius: 4px;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.form-button-text {
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--color-title-write);
+  padding: 8px 0 8px 24px;
+  cursor: pointer;
+  margin-right: 16px;
+}
+.form-button-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 24px;
+}
 /* section 4 */
 .customers-title {
   font-size: 36px;
@@ -635,8 +843,8 @@ img {
   border: 1px solid #e7e9fc;
   letter-spacing: 0.04em;
   border-radius: 4px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filters-button:hover,
@@ -675,7 +883,8 @@ img {
 }
 .portfolio-item:hover,
 .portfolio-item:focus {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-item-text {
