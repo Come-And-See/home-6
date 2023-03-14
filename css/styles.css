@@ -184,8 +184,9 @@ img {
   height: 100%;
   top: 0;
   left: 0;
- 
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), scale 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), scale 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
@@ -235,9 +236,6 @@ img {
   scale: 0.5;
 }
 
-
-
-
 /* Header */
 
 .logo {
@@ -269,7 +267,7 @@ img {
   padding-top: 24px;
   padding-bottom: 24px;
   display: block;
-  
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-nav-link:hover,
@@ -290,7 +288,7 @@ img {
   padding-top: 24px;
   padding-bottom: 24px;
   display: block;
- 
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-address-link:hover,
 .nav-address-link:focus {
@@ -701,7 +699,6 @@ img {
   color: var(--color-button-portfolio);
   padding: 40px 32px 0;
 }
-
 
 .portfolio-link:is(:hover, :focus) .portfolio-block {
   transform: translateY(0);
