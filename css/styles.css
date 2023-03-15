@@ -193,7 +193,7 @@ img {
 
 .modal {
   width: 408px;
-  min-height: 576px;
+  min-height: 584px;
 
   background-color: var(--modal-bkg);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -255,9 +255,8 @@ img {
   margin-bottom: 16px;
 }
 
-
 .modal-form-item {
-   margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .modal-form-text {
@@ -275,7 +274,7 @@ img {
   border: 1px solid var(--modal-form-border);
   padding-left: 38px;
   border-radius: 4px;
-  outline: none;
+  outline: transparent;
 
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -320,7 +319,6 @@ img {
 
 .modal-form-input-svg {
   position: relative;
- 
 }
 
 .modal-form-policy-text {
@@ -332,9 +330,7 @@ img {
 
 .modal-button-send {
   background-color: var(--color-button);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-
   border: none;
 
   font-weight: 500;
@@ -349,16 +345,14 @@ img {
 
   width: 169px;
   height: 56px;
-   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
-.modal-button-send:is(:hover, :focus)
-{
+.modal-button-send:is(:hover, :focus) {
   background-color: var(--color-button-hover);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-
-
 
 .modal-checkbox {
   position: absolute;
@@ -377,7 +371,7 @@ img {
 .modal-form-checkbox {
   display: flex;
   align-items: center;
-   gap: 8px;
+  gap: 8px;
   margin-bottom: 24px;
   cursor: pointer;
 }
@@ -388,7 +382,6 @@ img {
   height: 16px;
   border: 1px solid #2e2f42;
   border-radius: 2px;
- 
 }
 
 .modal-checkbox:checked + .modal-form-checkbox-icon {
@@ -755,15 +748,16 @@ img {
 }
 
 .form-input {
-  border: none;
+  border: 1px solid #ffffff;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background: transparent;
   width: 264px;
   height: 40px;
   color: var(--color-title-write);
-  outline: 1px solid #ffffff;
+  outline: transparent;
   padding: 8px 0 8px 16px;
+  margin-right: 24px;
 }
 
 .form-input::placeholder {
@@ -777,23 +771,23 @@ img {
   background: var(--color-button);
   border-radius: 4px;
   border: none;
-  padding: 0;
+  width: 165px;
   display: flex;
+  gap: 16px;
   align-items: center;
-}
 
-.form-button-text {
+  /* Style text */
+  font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--color-title-write);
-  padding: 8px 0 8px 24px;
+  padding-left: 24px;
   cursor: pointer;
-  margin-right: 16px;
 }
+
 .form-button-icon {
   width: 24px;
   height: 24px;
-  margin-right: 24px;
 }
 /* section 4 */
 .customers-title {
