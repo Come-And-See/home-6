@@ -270,7 +270,7 @@ img {
 }
 
 .modal-form-input {
-  width: 360px;
+  width: 100%;
   height: 40px;
   border: 1px solid var(--modal-form-border);
   padding-left: 38px;
@@ -376,8 +376,7 @@ img {
 .modal-form-checkbox {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
+   gap: 8px;
   margin-bottom: 24px;
   cursor: pointer;
 }
