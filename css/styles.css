@@ -251,8 +251,13 @@ img {
 .modal-form {
   padding: 0 24px;
 }
-.modal-form-ul {
+.modal-form-list {
   margin-bottom: 16px;
+}
+
+
+.modal-form-item {
+   margin-bottom: 8px;
 }
 
 .modal-form-text {
@@ -303,7 +308,7 @@ img {
 
 .modal-form-input-svg {
   position: relative;
-  margin-bottom: 8px;
+ 
 }
 .modal-form-icon {
   width: 18px;
