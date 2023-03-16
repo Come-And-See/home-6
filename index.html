@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <title>Studio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,6 +20,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+     <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg">
   </head>
   <body>
     <!-- Header -->
@@ -119,7 +121,7 @@
       </section>
 
       <!-- Section 2 -->
-      <section class="section">
+      <section class="section section-what">
         <div class="container">
           <h2 class="working-title">What are we doing</h2>
           <ul class="working-list">
@@ -392,7 +394,7 @@
           <form class="footer-subscribe-form">
             <input type="email" name="email" class="form-input" placeholder="E-mail" />
 
-            <button class="form-button">
+            <button class="form-button" type="submit">
               Subscribe
               <svg class="form-button-icon">
                 <use href="./images/icons.svg#icon-frame"></use>
@@ -458,11 +460,11 @@
             <input type="checkbox" class="modal-checkbox" name="policy" />
             <span class="modal-form-checkbox-icon"></span>
             <span class="modal-form-policy-text">
-              I accept the terms and conditions of the <a href="#">Privacy Policy</a>
+              I accept the terms and conditions of the <a href="#" class="modal-form-policy-link">Privacy Policy</a>
             </span>
           </label>
 
-          <button class="modal-button-send">Send</button>
+          <button class="modal-button-send" type="submit">Send</button>
         </form>
       </div>
     </div>
